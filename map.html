@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4185171037b3d71a74b2dac07e2dd9c1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4185171037b3d71a74b2dac07e2dd9c1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4185171037b3d71a74b2dac07e2dd9c1 = L.map(
+                "map_4185171037b3d71a74b2dac07e2dd9c1",
+                {
+                    center: [49.1386, -123.0139],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7836396ec7720e0ce967864e8746ea60 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_7836396ec7720e0ce967864e8746ea60.addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+        
+    
+            var tile_layer_a07adeb9f4a7d070ee2aff86d66bc586 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a07adeb9f4a7d070ee2aff86d66bc586.addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+        
+    
+            var tile_layer_58ab862c6a4c2846556329ad69f65637 = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {"attribution": "Map data: \u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors, \u003ca href=\"http://viewfinderpanoramas.org\"\u003eSRTM\u003c/a\u003e | Map style: \u0026copy; \u003ca href=\"https://opentopomap.org\"\u003eOpenTopoMap\u003c/a\u003e (\u003ca href=\"https://creativecommons.org/licenses/by-sa/3.0/\"\u003eCC-BY-SA\u003c/a\u003e)", "detectRetina": false, "maxNativeZoom": 17, "maxZoom": 17, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_58ab862c6a4c2846556329ad69f65637.addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+        
+    
+            var tile_layer_d54c6c7de88d554665e8e3b9b93a8e91 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_d54c6c7de88d554665e8e3b9b93a8e91.addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+        
+    
+                function getLatLng(e){
+                    var lat = e.latlng.lat.toFixed(6),
+                        lng = e.latlng.lng.toFixed(6);
+                    var txt = "[" + lat + "," + lng + "]";
+                    navigator.clipboard.writeText(txt);
+                    alert("Copied to clipboard : \n    " + txt);
+                    };
+                map_4185171037b3d71a74b2dac07e2dd9c1.on('click', getLatLng);
+            
+    
+
+            var geocoderOpts_geocoder_864b4d35c50a20b25142e6d7710214a3 = {"collapsed": false, "defaultMarkGeocode": true, "position": "topright", "provider": "nominatim", "providerOptions": {}, "zoom": 11};
+
+            // note: geocoder name should start with lowercase
+            var geocoderName_geocoder_864b4d35c50a20b25142e6d7710214a3 = geocoderOpts_geocoder_864b4d35c50a20b25142e6d7710214a3["provider"];
+
+            var customGeocoder_geocoder_864b4d35c50a20b25142e6d7710214a3 = L.Control.Geocoder[ geocoderName_geocoder_864b4d35c50a20b25142e6d7710214a3 ](
+                geocoderOpts_geocoder_864b4d35c50a20b25142e6d7710214a3['providerOptions']
+            );
+            geocoderOpts_geocoder_864b4d35c50a20b25142e6d7710214a3["geocoder"] = customGeocoder_geocoder_864b4d35c50a20b25142e6d7710214a3;
+
+            L.Control.geocoder(
+                geocoderOpts_geocoder_864b4d35c50a20b25142e6d7710214a3
+            ).on('markgeocode', function(e) {
+                var zoom = geocoderOpts_geocoder_864b4d35c50a20b25142e6d7710214a3['zoom'] || map_4185171037b3d71a74b2dac07e2dd9c1.getZoom();
+                map_4185171037b3d71a74b2dac07e2dd9c1.setView(e.geocode.center, zoom);
+            }).addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+
+        
+    
+            var macro_element_26bb4cab68e28896f5df5f5d4cbe819a = L.tileLayer.wms(
+                "https://geo.weather.gc.ca/geomet-climate/?service=WMS\u0026version=1.3.0\u0026request=GetCapabilities",
+                {"attribution": "stations", "format": "image/png", "layers": "CLIMATE.STATIONS", "styles": "", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            macro_element_26bb4cab68e28896f5df5f5d4cbe819a.addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+        
+    
+            var tile_layer_e3e5d2c7d9d0691500879cd5f3e94c2b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_4f475ff031c67c03c547b25656f45844 = new L.Control.MiniMap(
+                tile_layer_e3e5d2c7d9d0691500879cd5f3e94c2b,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_4185171037b3d71a74b2dac07e2dd9c1.addControl(mini_map_4f475ff031c67c03c547b25656f45844);
+        
+    
+            var measure_control_3b927a76cdf18270dcf35a22920bccdc = new L.Control.Measure(
+                {"position": "topright", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_4185171037b3d71a74b2dac07e2dd9c1.addControl(measure_control_3b927a76cdf18270dcf35a22920bccdc);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var layer_control_b0666fe33c2cb350421ae3553802af1c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d54c6c7de88d554665e8e3b9b93a8e91,
+                    "esriworldimagery" : tile_layer_a07adeb9f4a7d070ee2aff86d66bc586,
+                    "opentopomap" : tile_layer_58ab862c6a4c2846556329ad69f65637,
+                },
+                overlays :  {
+                    "climate" : macro_element_26bb4cab68e28896f5df5f5d4cbe819a,
+                },
+            };
+            let layer_control_b0666fe33c2cb350421ae3553802af1c = L.control.layers(
+                layer_control_b0666fe33c2cb350421ae3553802af1c_layers.base_layers,
+                layer_control_b0666fe33c2cb350421ae3553802af1c_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_4185171037b3d71a74b2dac07e2dd9c1);
+
+        
+</script>
+</html>
